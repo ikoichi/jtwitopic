@@ -49,7 +49,7 @@ Code:
 			container: 'tweets',
 			width: '700px',
 			tweetsNumber: '2',
-			lang: 'en',
+			lang: 'en'
 		});
 					
 	});
