@@ -28,7 +28,7 @@ var jTwiTopic = {
 	numElements: 0,
 	results: null,
 	slideShowInterval: 0,
-	orientation: 'horizontal',
+	orientation: 'horizontal'
 };
 
 jTwiTopic.request = function( topic, options ){
@@ -82,7 +82,7 @@ jTwiTopic.gogogo = function(data){
 						.addClass('jtt-container')
 						.css({
 							'opacity': jTwiTopic.slideShowOpacity,
-							'width': jTwiTopic.width,
+							'width': jTwiTopic.width
 						})
 						.text('');
 		
@@ -199,7 +199,7 @@ jTwiTopic.gogogo = function(data){
 				.text('Down')
 				.css({ 
 					'top': $('.jtt-header').offset().top+$('#'+jTwiTopic.container).outerHeight()+17,
-					'width':ul.width()-5,
+					'width':ul.width()-5
 					//'left':($(document).width()/2)-(d.width()/2)
 				}) 
 				.click(function(){
@@ -231,7 +231,7 @@ jTwiTopic.appendHeader = function(){
 			.css({
 				'margin-left': '0px',
 				'padding': '10px',
-				'position': 'relative',
+				'position': 'relative'
 			})
 			.append( $('<span>').css('text-align','left').text('jTwiTopic: '+jTwiTopic.topic) )
 			.css({ 'width' : $('.jtt-ul').outerWidth()-20, 'margin-top': $(d).css('margin-top') })
@@ -245,15 +245,15 @@ jTwiTopic.showNext = function(){
 	if(jTwiTopic.shownElement == (jTwiTopic.numElements-1) ){
 		
 		$('.jtt-li').animate({
-			opacity: 0,
+			opacity: 0
 		}, 500, function() {
 							// Animation complete.
 							$( $('.jtt-ul').get(0) ).animate({
-								marginTop: '0',
+								marginTop: '0'
 							}, 0, function() {
 								// Animation complete.
 								$('.jtt-li').animate({
-									opacity: 1,
+									opacity: 1
 								}, 500, function(){});
 							});
 		});
@@ -263,7 +263,7 @@ jTwiTopic.showNext = function(){
 	else{
 		jTwiTopic.shownElement++;
 		$( $('.jtt-ul').get(0) ).animate({
-			marginTop: '-='+(jTwiTopic.getMaxLiHeight()+11),
+			marginTop: '-='+(jTwiTopic.getMaxLiHeight()+11)
 		}, 500, function() {
 			// Animation complete.
 		});
@@ -275,15 +275,15 @@ jTwiTopic.showPrev = function(){
 	if(jTwiTopic.shownElement == 0 ){
 		
 		$('.jtt-li').animate({
-			opacity: 0,
+			opacity: 0
 		}, 500, function() {
 							// Animation complete.
 							$( $('.jtt-ul').get(0) ).animate({
-								marginTop: "-"+((jTwiTopic.numElements-1)*(jTwiTopic.getMaxLiHeight()+10))+"px",
+								marginTop: "-"+((jTwiTopic.numElements-1)*(jTwiTopic.getMaxLiHeight()+10))+"px"
 							}, 0, function() {
 								// Animation complete.
 								$('.jtt-li').animate({
-									opacity: 1,
+									opacity: 1
 								}, 500, function(){});
 							});
 		});
@@ -293,7 +293,7 @@ jTwiTopic.showPrev = function(){
 	else{
 		jTwiTopic.shownElement--;
 		$( $('.jtt-ul').get(0) ).animate({
-			marginTop: '+='+(jTwiTopic.getMaxLiHeight()+10),
+			marginTop: '+='+(jTwiTopic.getMaxLiHeight()+10)
 		}, 500, function() {
 			// Animation complete.
 		});

@@ -1,7 +1,7 @@
 jTwiTopic
 =========
 
-[jTwiTopic](www.jtwitopic.com) - An easy jQuery Plugin showing Tweets
+[jTwiTopic](http://www.jtwitopic.com) - An easy jQuery Plugin showing Tweets
 
 ####1. Include necessary JS files
 
